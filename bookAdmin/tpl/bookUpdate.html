@@ -1,0 +1,68 @@
+<div ng-controller="bookUpdate.ctrl">
+    <ol class="breadcrumb">
+        <li ng-click="hide()"><a>教材管理</a></li>
+        <li>编辑教材</li>
+    </ol>
+    <div class="container">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-1 control-label require">教材封面</label>
+                <div class="col-sm-8">
+                    <a class="fresco image-item" href="{{model.url}}" ng-if="model.url" data-fresco-group="images">
+                        <img ng-src="{{model.url}}" class="img-thumbnail pull-left" />
+                    </a>
+                    <img src="images/plus.png" class="img-thumbnail pull-left upload" alt="添加图片" ng-click="uploadFile()" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-1 control-label require">教材名称</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" ng-model="model.name"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-1 control-label require">作者</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" ng-model="model.author"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-1 control-label require">出版社</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" ng-model="model.cbs"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-1 control-label">出版时间</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" ng-model="model.time"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-1 control-label require">商品详情</label>
+                <div class="col-sm-5">
+                    <textarea style="width: 100%;padding: 10px" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-1 control-label">品相</label>
+                <div class="col-sm-5">
+                    <select>
+                        <option>新</option>
+                        <option>二手-好</option>
+                        <option>二手-一般</option>
+                        <option>二手-差</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+        <div class="form-group">
+            <label class="col-sm-1 control-label"></label>
+            <div class="col-sm-2">
+                <button type="button" class="btn btn-success" ng-click="submit(model)" style="margin-left: -10px;"> 确  定 </button>
+                <button type="button" class="btn btn-success" data-dismiss="modal" style="margin-left: -10px;"> 取  消 </button>
+            </div>
+        </div>
+
+    </div>
+</div>

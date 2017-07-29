@@ -1,0 +1,77 @@
+.list-group {
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 10px;
+    max-width:300px;
+}
+
+.list-group button {
+    padding-right: 40px;
+    padding-left: 60px;
+    position: relative;
+    /*height: 42px;*/
+    overflow:hidden;
+}
+
+.custom_icon {
+    display: inline-block;
+    position: absolute;
+    right: 8px;
+    top: 10px;
+    width: 25px;
+    height: 20px;
+    background-size: 100% 100%;
+    display: none;
+}
+
+
+.custom_icon.arrow_right_double {
+    background-image: url(../images/arrow_right_double.png);
+}
+
+.list-group button:hover .arrow_right_double {
+    display: inline-block;
+}
+
+.list-group button.active .arrow_right_double {
+    display: inline-block;
+    background-image: url(../images/arrow_right_double_empty.png);
+}
+
+.option {
+    display:none;
+}
+
+.list-group .list-group-item:hover .option{
+    display:inline-block;
+}
+
+
+.panel-body {
+    height:400px;
+    overflow:auto;
+}
+
+.list-container {
+    display:block;
+}
+
+.panel-footer {
+    background:#fff;
+    text-align:right;
+}
+
+.list-group button .icon {
+    display:inline-block;
+    width:30px;
+    height:30px;
+    border:solid 1px #eee;
+    border-radius:2px;
+    vertical-align:middle;
+    position:absolute;
+    top:5px;
+    left:25px;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:contain;
+}

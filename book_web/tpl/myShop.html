@@ -1,0 +1,63 @@
+﻿<div ng-controller="myShop.ctrl">
+    <div class="user">
+        <div class="menu">
+            <div class="menu-head">用户中心</div>
+            <ul class="menu-list">
+                <li class="activeMenu">我的购物车</li>
+                <li ng-click="showMyOrder()">我的订单</li>
+                <li ng-click="showMyCollect()">我的收藏</li>
+                <li ng-click="showMyAddress()">收货地址</li>
+                <li ng-click="showMyReject()">我的退货</li>
+                <li ng-click="showMyData()">个人资料</li>
+                <li ng-click="showMySale()">我要出售</li>
+                <li ng-click="showMyNum()">我的积分</li>
+            </ul>
+        </div>
+        <div class="model-content">
+            <div class="model-title"><span>我的购物车</span></div>
+            <table class="shopList">
+                <tr>
+                    <th colspan="3">商品</th>
+                    <th>单价（元）</th>
+                    <th class="w_100">数量</th>
+                    <th>小计</th>
+                    <th class="w_80">操作</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <img src="#">
+                        </div>
+                    </td>
+                    <td>书名在这里</td>
+                    <td>作者名字</td>
+                    <td>99.09</td>
+                    <td>
+                        <span class="shop-add" style="left: 0"> - </span>
+                        123
+                        <span class="shop-add" style="right:0;"> + </span>
+                    </td>
+                    <td>999.00</td>
+                    <td ng-click="delete()">删除</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <img src="#">
+                        </div>
+                    </td>
+                    <td>书名在这里</td>
+                    <td>作者名字</td>
+                    <td>99.09</td>
+                    <td>
+                        <span class="shop-add" style="left: 0"> - </span>
+                        123
+                        <span class="shop-add" style="right:0;"> + </span>
+                    </td>
+                    <td>999.00</td>
+                    <td ng-click="delete()">删除</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

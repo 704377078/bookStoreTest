@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org" id="ng-app" ng-app="meApp">
+<head>
+    <meta charset="utf-8" />
+    <title>二手教材网</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular1.2.9.min.js"></script>
+
+    <script>
+        (function () {
+            var version = 0;
+            document.writeln('<link href="css/index.css?v=' + version + '" rel="stylesheet" />');
+            document.writeln('<link href="css/custom.css?v=' + version + '" rel="stylesheet" />');
+
+            document.writeln('<script src="js/Config.js?v=' + version + '"></scr' + 'ipt>');
+            document.writeln('<script src="js/me-1.0.js?v=' + version + '"></scr' + 'ipt>');
+            document.writeln('<script src="js/me.global.js?v=' + version + '"></scr' + 'ipt>');
+            document.writeln('<script src="js/Util.js?v=' + version + '"></scr' + 'ipt>');
+            document.writeln('<script src="js/Pagination.js?v=' + version + '"></scr' + 'ipt>');
+            document.writeln('<script src="js/File.js?v=' + version + '"></scr' + 'ipt>');
+            document.writeln('<script src="js-ctrl/index.js?v=' + version + '"></scr' + 'ipt>');
+        })();
+    </script>
+    <script>
+        me.config({
+            container: "#main_body",
+            main: "myData.html",
+            path: "tpl/",
+            scroller: "#main_body",
+            debug: Config.debug
+        });
+    </script>
+
+</head>
+<body ng-controller="me.ctrl">
+<div ng-controller="index.ctrl">
+    <div class="header">
+        <div class="head-list">
+            <ul class="fl-right clearfix">
+                <li>登录/注册</li>
+                <li>个人中心</li>
+                <li>我的订单</li>
+                <li>帮助中心</li>
+            </ul>
+        </div>
+        <div class="head-middle clearfix">
+            <div class="head-name">二手教材网</div>
+            <div class="head-btn">
+                <span>我的订书</span>
+                <span>购物车</span>
+            </div>
+        </div>
+    </div>
+    <div class="head-menu">
+        <div class="head-menu-content">
+            <ul class="fl-left">
+                <li>首页</li>
+                <li>关于我们</li>
+                <li>教材专栏</li>
+            </ul>
+            <ul class="fl-right">
+                <li>旧书回收</li>
+                <li>满25包邮</li>
+            </ul>
+        </div>
+    </div>
+    <div id="main_body"></div>
+    <div class="foot">
+        <div class="foot-content">施同学的毕业设计 2017年5月 杭州电子科技大学 信息管理与信息系统</div>
+    </div>
+</div>
+
+<script>
+    me.run('meApp', []);
+</script>
+</body>
+</html>

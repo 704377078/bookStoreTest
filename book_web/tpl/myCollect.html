@@ -1,0 +1,49 @@
+﻿<div ng-controller="myCollect.ctrl">
+    <div class="user">
+        <div class="menu">
+            <div class="menu-head">用户中心</div>
+            <ul class="menu-list">
+                <li ng-click="showMyShop()">我的购物车</li>
+                <li ng-click="showMyOrder()">我的订单</li>
+                <li class="activeMenu">我的收藏</li>
+                <li ng-click="showMyAddress()">收货地址</li>
+                <li ng-click="showMyReject()">我的退货</li>
+                <li ng-click="showMyData()">个人资料</li>
+                <li ng-click="showMySale()">我要出售</li>
+                <li ng-click="showMyNum()">我的积分</li>
+            </ul>
+        </div>
+        <div class="model-content">
+            <div class="model-title"><span>我的积分</span></div>
+            <table class="shopList">
+                <tr>
+                    <th colspan="3">商品</th>
+                    <th>单价（元）</th>
+                    <th class="w_80">操作</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <img src="#">
+                        </div>
+                    </td>
+                    <td>书名在这里</td>
+                    <td>作者名字</td>
+                    <td>99.09</td>
+                    <td ng-click="delete()">删除</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <img src="#">
+                        </div>
+                    </td>
+                    <td>书名在这里</td>
+                    <td>作者名字</td>
+                    <td>99.09</td>
+                    <td ng-click="delete()">删除</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+﻿<div ng-controller="myData.ctrl">
+    <div class="user">
+        <div class="menu">
+            <div class="menu-head">用户中心</div>
+            <ul class="menu-list">
+                <li ng-click="showMyShop()">我的购物车</li>
+                <li ng-click="showMyOrder()">我的订单</li>
+                <li ng-click="showMyCollect()">我的收藏</li>
+                <li ng-click="showMyAddress()">收货地址</li>
+                <li ng-click="showMyReject()">我的退货</li>
+                <li class="activeMenu" ng-click="showMyData()">个人资料</li>
+                <li ng-click="showMySale()">我要出售</li>
+                <li ng-click="showMyNum()">我的积分</li>
+            </ul>
+        </div>
+        <div class="model-content">
+            <div class="model-title"><span>个人资料</span></div>
+            <div class="form-horizontal" style="margin-top: 30px">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">帐户名</label><span style="line-height: 32px;font-size: 14px">：秋秋秋</span>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">电子邮件</label>
+                    <div class="col-sm-8">
+                        <input class="form-control w_200" type="text" ng-model="param.article_memo" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">联系方式</label>
+                    <div class="col-sm-8">
+                        <input class="form-control w_200" type="text" ng-model="param.article_memo" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" ng-click="submit(model)">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

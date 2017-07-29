@@ -1,0 +1,39 @@
+﻿<div ng-controller="myReject.ctrl">
+    <div class="user">
+        <div class="menu">
+            <div class="menu-head">用户中心</div>
+            <ul class="menu-list">
+                <li ng-click="showMyShop()">我的购物车</li>
+                <li ng-click="showMyOrder()">我的订单</li>
+                <li ng-click="showMyCollect()">我的收藏</li>
+                <li ng-click="showMyAddress()">收货地址</li>
+                <li class="activeMenu">我的退货</li>
+                <li ng-click="showMyData()">个人资料</li>
+                <li ng-click="showMySale()">我要出售</li>
+                <li ng-click="showMyNum()">我的积分</li>
+            </ul>
+        </div>
+        <div class="model-content">
+            <div class="model-title"><span>我的积分</span></div>
+            <table class="shopList">
+                <tr>
+                    <th colspan="5" style="text-align: left">订单号</th>
+                    <th colspan="2">订单时间</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <img src="#">
+                        </div>
+                    </td>
+                    <td>书名中这里</td>
+                    <td>作者</td>
+                    <td style="border-right: 1px solid #eee">人民出版社</td>
+                    <td style="border-right: 1px solid #eee">订单总额：99.99</td>
+                    <td style="border-right: 1px solid #eee">已完成</td>
+                    <td style="color: #0055aa" ng-click="delete()">删除订单</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

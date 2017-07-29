@@ -1,0 +1,47 @@
+<div ng-controller="orderList.ctrl">
+    <ol class="breadcrumb">
+        <li>订单列表</li>
+    </ol>
+    <div class="container">
+        <form class="form-inline searchform">
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="请输入用户名" ng-model="web_user_account" style="width: 300px"/>
+                <button class="btn btn-primary" ng-click="listCard()">查询</button>
+            </div>
+        </form>
+        <table class="table table-hover">
+            <tr class="info">
+                <th class="text-center w_100">订单编号</th>
+                <th class="text-center w_100">用户名</th>
+                <th class="text-center w_100">教材名称</th>
+                <th class="text-center w_100">金额</th>
+                <th class="text-center w_200">状态</th>
+                <th class="text-center w_200">生成时间</th>
+                <th class="text-center w_100">查看</th>
+            </tr>
+            <tr ng-repeat="d in data">
+                <td>{{d.order_no}}</td>
+                <td>{{d.web_user_account}}</td>
+                <td>{{d.course_name}}</td>
+                <td>{{d.course_name}}</td>
+                <td>{{d.order_price}}</td>
+                <td>{{d.invoice_apply_time}}</td>
+                <td>
+                    <a class="link" ng-click="getDetail(d,$index)">查看详情</a>
+                </td>
+            </tr>
+            <tr>
+                <td>94848484999</td>
+                <td>秋秋秋</td>
+                <td>Office 2007中文版从入门到精通</td>
+                <td>￥60.00</td>
+                <td>已完成/已退货</td>
+                <td>2014-01-21 10:00</td>
+                <td>
+                    <a class="link" ng-click="getDetail(d,$index)">查看详情</a>
+                </td>
+            </tr>
+        </table>
+        <div id="pager"></div>
+    </div>
+</div>

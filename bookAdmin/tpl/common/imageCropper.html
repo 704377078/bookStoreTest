@@ -1,0 +1,39 @@
+﻿<div ng-controller="imageCropper.ctrl" class="pop">
+    <div class="modal fade" id="modal_imageCropper" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document" style="width:900px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">{{title}}</h4>
+                </div>
+                <div class="modal-body" style="height:550px;overflow-y:auto;">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <input type="file" id="image_file" accept="image/jpg,image/jpeg,image/png,image/gif,image/bmp" />
+                            </div>
+                        </div>
+                        <div class="row custom-margin-top" style="display:none;" id="cropper_image_container">
+                            <div class="col-md-8">
+                                <div class="img-container">
+                                    <img id="cropper_image" alt="Picture">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <!-- <h3 class="page-header">Preview:</h3> -->
+                                <div class="docs-preview clearfix">
+                                    <div class="img-preview preview-lg"></div>
+                                    <div class="img-preview preview-md"></div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="modal-footer form-inline">
+                    <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-sm btn-primary" ng-click="submit()">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

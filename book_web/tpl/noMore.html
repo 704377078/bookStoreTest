@@ -1,0 +1,41 @@
+<div ng-controller="noMore.ctrl">
+    <ol class="breadcrumb">
+        <li>发票管理</li>
+    </ol>
+    <div class="container">
+        <form class="form-inline searchform">
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="请输入用户名" ng-model="web_user_account" />
+                <button class="btn btn-primary" ng-click="listBill()">查询</button>
+            </div>
+        </form>
+        <table class="table table-hover">
+
+            <tr class="info">
+                <th class="text-center w_100">订单编号</th>
+                <th class="text-center w_100">用户名</th>
+                <th class="text-center w_100">课程名称</th>
+                <th class="text-center w_100">金额</th>
+                <th class="text-center w_200">申请时间</th>
+                <th class="text-center w_100">查看</th>
+                <th class="text-center w_100">操作</th>
+            </tr>
+            <tr ng-repeat="d in data">
+                <td>{{d.order_no}}</td>
+                <td>{{d.web_user_account}}</td>
+                <td>{{d.course_name}}</td>
+                <td>{{d.order_price}}</td>
+                <td>{{d.invoice_apply_time}}</td>
+                <td>
+                    <a class="link" ng-click="getBills(d,$index)">查看</a>
+                </td>
+                <td>
+                    <!--<a ng-click="delBill(d,$index)">删除</a> |-->
+                    <a class="link" ng-click="sendBills(d,$index)" ng-if="d.invoice_status==1">点击寄送</a>
+                    <a class="gray" ng-if="d.invoice_status==2">已寄送</a>
+                </td>
+            </tr>
+        </table>
+        <div id="billList_pager"></div>
+    </div>
+</div>
